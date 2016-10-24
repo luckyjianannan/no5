@@ -1,0 +1,76 @@
+/*----------------------清空样式---------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,img,input{ margin:0; padding:0;}
+ul,li{list-style:none}
+a{text-decoration: none;color:#666;}
+a:hover{text-decoration: none;}
+/*----------------------公用样式-------------------*/
+body{font-size:12px;color:#666;height:1000px;}
+.l{float:left}
+.r{float:right}
+.w{width:1200px;margin:0 auto;}
+/*------------------------header-info--------------------*/
+#header-info{height:30px;width:100%;background:#ccc;border-bottom:1px solid #e0e0e0;background:url(../img/header-info.gif);}
+#header-info .info{height:30px;}
+#header-info .info .l{margin-top:9px;}
+#header-info .info .r ul li{float:left;height:30px;line-height:30px;color:#ccc;}
+#header-info .info .r ul li a{padding:0 12px;color:#666;}
+#header-info .info .r ul li.last{line-height:34px;}
+#header-info .info .r ul li .first{padding-right:26px;background:url(../img/header-down.gif) no-repeat 68px center;}
+
+
+/*------------------------header-search--------------------*/
+#header-search{height:90px;border-top:1px solid #f4f4f4;}
+#header-search h1{padding:15px 0 0 35px;}
+#header-search .search-center{padding:23px 0 0 170px;}
+#header-search .search-center .inp{height:30px;width:361px;border:2px solid #02a3f0;font-size:14px;}
+#header-search .search-center .btn{float:right;height:30px;width:67px;background:#02a3f0;border:2px solid #02a3f0;text-align:center;line-height:30px;font-size:14px;color:#fff;font-weight:600;}
+#header-search .search-center p{line-height:28px;}
+#header-search .search-center p a{padding-left:9px;}
+#header-search .search-center p a:hover{text-decoration:underline;color:red;}
+#header-search .r{width:195px;height:42px;border-radius:42px;border:1px solid #d6d6d6;margin-top:21px;background:url(../img/hearder-carbg.gif);
+text-align:center;line-height:42px;font-weight:600;font-size:16px;}
+#header-search .r .in{height:42px;width:42px;border-radius:42px;border:1px solid #d6d6d6;background:url(../img/header-car.gif) no-repeat center;float:left;}
+
+
+/*--------------------------nav----------------------------*/
+#nav{height:40px;width:100%;background:url(../img/nav-bg.gif);}
+#nav .nav{height:40px;}
+
+#nav #box a{text-decoration:none;color:#666;}
+#nav #box a:hover{text-decoration: none;color:#03adeb;}
+#nav #box dl{width:230px;background:#f8f8f8;color:#666;position:relative;
+		display:none;font-weight:100;font-size:15px;}
+#nav #box dt{height:76px;padding:9px 0px 0px 20px;border:1px solid #ccc;border-top:0;}
+#nav #box dt.first{padding:14px 0px 0px 20px;}
+#nav #box dt.last{padding:9px 0px 10px 20px;}
+#nav #box dt a{float:left;padding-right:13px;font-size:12px;line-height:22px;}
+#nav #box dt a.last{padding-right:0;}
+#nav #box h6{font-size:13px;height:26px;line-height:26px;color:#000;background:url(../img/bgs2.gif) no-repeat 187px 3px;text-align: left;}
+#nav #box{width:230px;height:40px;background:url(../img/bgs.gif);line-height:40px;text-align:center;float:left;font-weight:600;font-size:15px;color:#fff}
+#nav #box dd{font-size:12px;width:650px;position:absolute;left:230px;border:1px solid #ccc;
+		display:none;background:#fff;}
+#nav #box dd ul.l{width:380px;padding:0 20px;}
+#nav #box dd ul.l li{width:380px;line-height:22px;color:#666;padding:10px 0;border-bottom:1px dashed #ccc;clear:both;float:left;}
+#nav #box dd ul.l li a{float:left;padding-right:14px;}
+#nav #box dd ul.l li b{float:left; color:#000;margin-right:21px;line-height:32px;}
+#nav #box dd div.r{width:200px;margin-bottom:5px;padding:10px 15px 0;background:#f8f8f8;}
+#nav #box dd div.r h5{margin-top:5px;height:30px;line-height:30px;border-bottom:1px solid #666;color:#666;text-align: left;}
+#nav #box dd div.r ul{padding:10px 0 ;float:left;}
+#nav #box dd div.r li{width:100px;line-height:24px;float:left;text-align: left;}
+#nav #box dd.fool1{top:0;}
+#nav #box dd.fool2{top:-20px}
+#nav #box dd.fool3{top:-150px}
+#nav #box dd.fool4{top:-160px}
+#nav #box dd.fool5{top:-70px}
+#nav #box dd.fool6{top:-290px}
+#nav #box dd.fool7{top:-130px}
+
+#nav .list{float:left;margin-left:9px;font-size:15px;font-weight:600;}
+#nav .list li{float:left;height:40px;line-height:40px;padding:0 15px;color:#565656;}
+#nav .list li a {color:#fff;}
+#nav .list li a:hover{color:#03adeb;} 
+
+
+
+
+

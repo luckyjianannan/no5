@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>N°5</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/head.css" />
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/cookie.js"></script>
+		<title>成功注册</title>
+		<style>
+			#succenter{width:100%;height:397px;}
+			#succenter .suc{height:352px;width:978px;border:1px solid #c6e6f3;margin:10px auto;}
+			#succenter .suc .bg{height: 56px;width: 671px;background: url(img/reg-bg.png) no-repeat -162px -240px;margin-bottom: 20px;margin-top: 40px;margin-left:auto;margin-right:auto;}
+			#succenter .suc .info{width: 650px;margin:0 auto;line-height:18px;height:36px;text-align:center;}
+			#succenter .suc .zl{width:179px;height:41px;margin:34px auto;}	
+			#succenter .suc .go-index{display:inline-block;margin-left:328px;}
+			#succenter .suc .go{display:inline-block;margin-left:38px;}
+			#succenter .suc a{color:#0094FF;}
+			#succenter .suc .bgt{height: 3px; width: 671px;background: url(img/reg-bg.png) no-repeat -161px -435px; margin-bottom: 40px;margin-right: auto;margin-left: auto;margin-top: 18px;}
+		</style>
+<script>
+	window.onload = function(){
+	$("#sucfo").load("foot.html");
+			
+	$("#sucheader").load("head.html",function(){
+		var now = new Date();
+		if(now.getHours() >= 6 && now.getHours() <=8){
+			$("#header-info .time").text("早上好，欢迎光临No5时尚广场。")
+		}else if(now.getHours() >= 8 && now.getHours() <=12){
+			$("#header-info .time").text("上午好，欢迎光临No5时尚广场。")
+		}else if(now.getHours() >= 12 && now.getHours() <=14){
+			$("#header-info .time").text("中午好，欢迎光临No5时尚广场。")
+		}else if(now.getHours()>= 14 && now.getHours()<=18){
+			$("#header-info .time").text("下午好，欢迎光临No5时尚广场。")
+		}else {
+			$("#header-info .time").text("晚上好，欢迎光临No5时尚广场。")
+		};
+	//三级菜单	
+		$("#box").mouseenter(function(){
+			$("#box dl").stop(true).slideDown(200)
+		});
+					
+		$("#box").mouseleave(function(){
+			$("#box dl").stop(true).slideUp(200)
+		});
+					
+		$("#box dl").mouseenter(function(){	
+			$(this).css("background","#fff");
+			$(this).children("dd").stop(true).show();
+		});
+					
+		$("#box dl").mouseleave(function(){
+			$(this).css("background","#F8F8F8");
+			$(this).children("dd").stop(true).hide();
+		});
+	});
+	
+	var oSpan1 = document.getElementsByClassName("user")[0];
+	var oSpan2 = document.getElementsByClassName("email")[0];
+//	alert(getCookie("name"));
+//	alert(getCookie("Email"));
+	oSpan1.innerHTML = getCookie("name");
+	oSpan2.innerHTML = getCookie("Email");
+	
+};
+</script>
+	</head>
+	<body>
+	<div id="sucheader"></div>
+	<div id="succenter">
+		<div class="suc">
+			<div class="bg"></div>
+			<div class="info">
+			尊敬的
+				<span class="user" style="color:#0094FF">111</span>！
+				祝贺您成为No5时尚广场用户！为了方便您购物及查询，请记住您的用户名和密码！<br/>
+				您的注册信息已经发送到您的注册邮箱<span class="email" style="color:#0094FF"></span>
+			</div>
+			<div class="zl"><a href="#"><img src="img/suc.gif" alt title /></a></div>
+			<a href="index.html" class="go-index">返回首页＞＞</a>
+			<a href="#" class="go">返回注册前页面＞＞</a>
+			<a href="#" class="go">进入我的账户＞＞</a>
+			<div class="bgt"></div>
+		</div>
+	</div>
+	<div id="sucfo"></div>
+	</body>
+</html>

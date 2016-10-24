@@ -1,0 +1,568 @@
+/*----------------------清空样式---------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,img,input,a{ margin:0; padding:0;}
+ul,li{list-style:none}
+img{border:none;}
+a{text-decoration: none;color:#666;}
+a:hover{text-decoration: none;}
+/*----------------------公用样式-------------------*/
+body{font-size:12px;color:#666;height:1000px;}
+.l{float:left}
+.r{float:right}
+.w{width:1200px;margin:0 auto;}
+/*------------------------header----------------------*/
+#header #nav #box{position:relative;z-index: 100;}
+#header #nav #box dl{display:block;}
+
+#back-top .top,.inline{border:1px solid #ccc;width:40px;height:50px;background:#f1f1f1;}
+#back-top .top{position:fixed;bottom:60px;right:-15px;display:none;}
+#back-top .top dt{background:url(../img/kf.jpg) no-repeat center -25px;width:40px;height:25px;}   
+#back-top .top dd{width:40px;height:25px;text-align:center;}
+#back-top .inline{position:fixed;bottom:10px;right:-15px;}
+#back-top .inline dt{background:url(../img/kf.jpg) no-repeat center 0;width:40px;height:25px;}   
+#back-top .inline dd{width:40px;height:25px;text-align:center;}
+
+/*-------------------------banner--------------------------*/
+#banner{height:400px;}
+#banner .pic{width:760px;height:400px;position:relative;margin-left:261px;float:left;}
+#banner .pic ul.tu{position:relative;}
+#banner .pic ul.tu li{position:absolute;top:0;}
+#banner .pic ul.num{position:absolute;bottom:10px;}
+#banner .pic ul.num li{width:22px;height:22px;border-radius:50%;float:left;background:#e8e8e8;text-align:center;line-height:22px;margin-left:10px;cursor: pointer;}
+#banner ul.rightlb{height:386px;width:190px;position:relative;float:right;margin-top:14px;margin-right:30px;}
+
+#banner ul.rightlb li{position:absolute;top:0;left:0;}
+#banner ul.rightlb li img{vertical-align: top;height:120px;}
+/*-------------------------content------------------------*/
+#content{height:5253px;}
+#content .remind{height:33px;padding-left:240px;overflow:hidden;position:relative;}
+#content .remind ul{height:33px;position:absolute;top:0;}
+#content .remind li{height:33px;line-height:33px;background:url(../img/remind.gif) no-repeat left center;padding-left:25px; }
+#content .remind li a:hover{text-decoration:underline;}
+
+#content .look{width:970px;height:187px;margin-left:230px;}
+#content .look a{padding-left:10px;display:inline-block;float:left;}
+/*-------------------------content/time-buy-------------------------*/
+#content .time-buy .top{height:64px;background:url(../img/c-tbuy.jpg) no-repeat 2px 30px;border-bottom:2px solid #ff8c8f}
+#content .time-buy .time{height:466px;border-bottom:1px solid #ccc;}
+#content .time-buy .time dl{width:291px;height:466px;margin-top:10px;float:left;margin-right:12px;}
+#content .time-buy .time dl.last{margin-right:0;}
+#content .time-buy .time dt{width:289px;height:362px;border:1px solid #e4e4e4;border-bottom:none;}
+#content .time-buy .time dt:hover{border:1px solid red;border-bottom:none;}
+#content .time-buy .time dt .times{height:40px;padding:1px;background:url(../img/clock.jpg) no-repeat 33px 5px #f8f7f5;padding-left:72px;text-align:center;line-height:40px;}
+#content .time-buy .time dt .times span{padding:0 5px;font-size:15px;color:#ff1a3a;font-weight:600;font-family: Arial;}
+#content .time-buy .time dt img{width:260px;height:260px;margin:10px 13px;}
+#content .time-buy .time dt .text{display:block;line-height:18px;color:#666;font-weight:600;padding:0 13px;}
+#content .time-buy .time .a-dd{display:block;width:291px;height:55px;
+							   background:url(../img/ctimed.jpg) no-repeat center;
+							   position: relative;z-index: 1;}
+#content .time-buy .time dd{font-size:20px;font-weight:600;color:#fff;
+							line-height:55px;   
+							font-family: Arial;
+							padding-left:23px;}
+#content .time-buy .time dd span{font-size:35px;}
+/*-------------------------content/sale-box-------------------------*/
+#content .sale-box{height:497px;}
+#content .sale-box .top{height:40px; background:url(../img/salebg.gif);padding-top:20px;}
+#content .sale-box .top li{float:left;width:240px;height:40px;
+						   font-size:18px;cursor:pointer;
+						   background:url(../img/tabsli_bg.jpg) no-repeat right bottom;
+						   line-height:40px;font-weight:bold;
+						   text-align:center;color:#000;
+						   border-bottom:2px solid #ccc;}
+#content .sale-box .top li.last{background: none;}
+/*----------spe-price------*/
+#content .sale-box .down{height:435px;margin-top:15px;border-bottom:1px solid #f1f1f1;position:relative;}
+#content .sale-box .down li{position:absolute;top:0;display:none;}
+#content .sale-box .down li.first{display:block;}
+#content .sale-box .spe-price{height:435px;}
+#content .sale-box .spe-price .left{height:395px;width:240px;float:left;
+									border-right:1px solid #f1f1f1;}
+#content .sale-box .spe-price .left dl{text-align:center;}
+#content .sale-box .spe-price .left dl .one{line-height:18px;padding:0 13px;
+											 text-align:left;margin-bottom:10px;}	
+#content .sale-box .spe-price .left dl .two{line-height:18px;height:70px;
+											 padding:0 13px;text-align:left;}	
+#content .sale-box .spe-price  dd.three{padding:5px 13px;
+											   text-align:bottom;color:#ff1a3a;
+											   font-size:16px;
+											   text-align:left;
+											   font-weight:600;
+											   font-family: Arial;}							
+																		
+#content .sale-box .spe-price .cen-left{height:415px;width:481px;
+										border-right:1px solid #f1f1f1;
+										float:left;}
+#content .sale-box .spe-price .cen-left .cen-l{width:240px;height:210px;
+											   text-align:center;
+											   float:left;
+											   border-right:1px solid #f1f1f1;
+											   border-bottom:1px solid #f1f1f1}										
+#content .sale-box .spe-price .cen-left .cen-l dd{line-height:18px;
+												  text-align:left;
+												  padding:0 13px;}
+
+
+#content .sale-box .spe-price .cen-left .cen-r{width:240px;height:210px;
+											   text-align:center;
+											   float:left;
+											   border-bottom:1px solid #f1f1f1;}	
+#content .sale-box .spe-price .cen-left .cen-r dd{line-height:18px;
+												  text-align:left;
+												  padding:0 13px;}												  
+#content .sale-box .spe-price .cen-left .cen-d{height:205px;
+											   width:480px;
+											   clear:both;
+											   padding-top:10px;}
+#content .sale-box .spe-price .cen-left dl dt{float:left;width:220px;text-align:center;}
+#content .sale-box .spe-price .cen-left dl dd{width:220px;float:left;}											   
+#content .sale-box .spe-price .cen-left dl .one{line-height:18px;padding:0 13px;
+											     text-align:left;margin-bottom:10px;}	
+#content .sale-box .spe-price .cen-left dl .two{line-height:18px;height:70px;
+											     padding:0 13px;text-align:left;}	
+
+																			
+#content .sale-box .spe-price .cen-right{width:240px;
+										 height:415px;
+										 border-right:1px solid #f1f1f1;
+										 float:left;
+										 text-align:center;}
+#content .sale-box .spe-price .cen-right dl .one{line-height:18px;padding:0 13px;
+											     text-align:left;margin-bottom:10px;}	
+#content .sale-box .spe-price .cen-right dl .two{line-height:18px;height:70px;
+											     padding:0 13px;text-align:left;}										
+										
+#content .sale-box .spe-price .right{width:235px;height:415px;float:left;text-align:center;}
+#content .sale-box .spe-price .right dd{line-height:18px;text-align:left;padding:0 13px;}
+
+/*----------start------*/
+#content .sale-box .start{height:435px;}
+#content .sale-box .start dl{width:228px;margin-right:15px;float:left;}
+#content .sale-box .start dl.last{margin-right:0;}
+#content .sale-box .start dl dd{padding:0 5px;}
+#content .sale-box .start dl .tp{margin-top:10px;
+								 line-height:15px;
+								 color:#444;
+								 height:30px;}
+#content .sale-box .start dl .center{line-height:15px;color:#666;
+										font-weight:600;margin-bottom:15px;}
+#content .sale-box .start dl .dw{background:url(../img/start2.jpg) no-repeat;
+									line-height:20px;
+									text-indent: 2em;
+									height:52px;
+									overflow: hidden;}	
+#content .sale-box .start dl .dw a{color:#019bfb;}																
+/*----------new------*/
+#content .sale-box .new{height:435px;}
+#content .sale-box .new .left{height:395px;width:240px;float:left;
+									border-right:1px solid #f1f1f1;}
+#content .sale-box .new .left dl{text-align:center;}
+#content .sale-box .new .left dl .one{line-height:18px;padding:0 13px;
+											 text-align:left;margin-bottom:10px;}	
+#content .sale-box .new .left dl .two{line-height:18px;height:70px;
+											 padding:0 13px;text-align:left;}	
+#content .sale-box .new  dd.three{padding:5px 13px;
+											   text-align:bottom;color:#ff1a3a;
+											   font-size:16px;
+											   text-align:left;
+											   font-weight:600;
+											   font-family: Arial;}							
+																		
+#content .sale-box .new .cen-left{height:415px;width:481px;
+										border-right:1px solid #f1f1f1;
+										float:left;}
+#content .sale-box .new .cen-left .cen-l{width:240px;height:210px;
+											   text-align:center;
+											   float:left;
+											   border-right:1px solid #f1f1f1;
+											   border-bottom:1px solid #f1f1f1}										
+#content .sale-box .new .cen-left .cen-l dd{line-height:18px;
+												  text-align:left;
+												  padding:0 13px;}
+
+
+#content .sale-box .new .cen-left .cen-r{width:240px;height:210px;
+											   text-align:center;
+											   float:left;
+											   border-bottom:1px solid #f1f1f1;}	
+#content .sale-box .new .cen-left .cen-r dd{line-height:18px;
+												  text-align:left;
+												  padding:0 13px;}												  
+#content .sale-box .new .cen-left .cen-d{height:205px;
+											   width:480px;
+											   clear:both;
+											   padding-top:10px;}
+#content .sale-box .new .cen-left dl dt{float:left;width:220px;text-align:center;}
+#content .sale-box .new .cen-left dl dd{width:220px;float:left;}											   
+#content .sale-box .new .cen-left dl .one{line-height:18px;padding:0 13px;
+											     text-align:left;margin-bottom:10px;}	
+#content .sale-box .new .cen-left dl .two{line-height:18px;height:70px;
+											     padding:0 13px;text-align:left;}	
+
+																			
+#content .sale-box .new .cen-right{width:240px;
+										 height:415px;
+										 border-right:1px solid #f1f1f1;
+										 float:left;
+										 text-align:center;}
+#content .sale-box .new .cen-right dl .one{line-height:18px;padding:0 13px;
+											     text-align:left;margin-bottom:10px;}	
+#content .sale-box .new .cen-right dl .two{line-height:18px;height:70px;
+											     padding:0 13px;text-align:left;}										
+										
+#content .sale-box .new .right{width:235px;height:415px;float:left;text-align:center;}
+#content .sale-box .new .right dd{line-height:18px;text-align:left;padding:0 13px;}
+/*---hot---*/
+#content .sale-box .hot{height:435px;}
+#content .sale-box .hot dl{width:206px;float:left;
+						   border:1px solid #ededed;
+						   border-bottom:4px solid #ededed;
+						   background:#f6f6f6;
+						   padding:10px;
+						   margin-right:15px;
+						   height:408px;
+						   text-align:center;}
+#content .sale-box .hot dl.last{margin-right:0;}						   
+#content .sale-box .hot dt{height: 180px;width:180px;padding:13px;background:#fff;}
+#content .sale-box .hot dd.ttop{margin-top:10px;height:30px;
+						   line-height:30px;
+						   color:#444;
+						   border-bottom:1px solid #d1d1d1;
+						   text-align:left;
+						   overflow: hidden;
+						   margin-bottom:15px;}
+#content .sale-box .hot dd.ddown{line-height:18px;
+								 height:36px;
+								 margin-bottom:8px;
+								 overflow: hidden;
+								 text-align:left;}				
+
+
+/*---over---*/
+#content .sale-box .over{height:435px;}
+#content .sale-box .over .lef{height:395px;width:240px;float:left;
+									border-right:1px solid #f1f1f1;}
+#content .sale-box .over .lef dl{text-align:center;}
+#content .sale-box .over .lef dl .one{line-height:18px;padding:0 13px;
+											 text-align:left;margin-bottom:10px;}	
+#content .sale-box .over .lef dl .two{line-height:18px;height:70px;
+											 padding:0 13px;text-align:left;}	
+#content .sale-box .over  dd.three{padding:5px 13px;
+											   text-align:bottom;color:#ff1a3a;
+											   font-size:16px;
+											   text-align:left;
+											   font-weight:600;
+											   font-family: Arial;}							
+																		
+#content .sale-box .over .cen-lef{height:415px;width:481px;
+										border-right:1px solid #f1f1f1;
+										float:left;}
+#content .sale-box .over .cen-lef .cen-l{width:240px;height:210px;
+											   text-align:center;
+											   float:left;
+											   border-right:1px solid #f1f1f1;
+											   border-bottom:1px solid #f1f1f1}										
+#content .sale-box .over .cen-lef .cen-l dd{line-height:18px;
+												  text-align:left;
+												  padding:0 13px;}
+
+
+#content .sale-box .over .cen-lef .cen-r{width:240px;height:210px;
+											   text-align:center;
+											   float:left;
+											   border-bottom:1px solid #f1f1f1;}	
+#content .sale-box .over .cen-lef .cen-r dd{line-height:18px;
+												  text-align:left;
+												  padding:0 13px;}												  
+#content .sale-box .over .cen-lef .cen-d{height:205px;
+											   width:480px;
+											   clear:both;
+											   padding-top:10px;}
+#content .sale-box .over .cen-lef dl dt{float:left;width:220px;text-align:center;}
+#content .sale-box .over .cen-lef dl dd{width:220px;float:left;}											   
+#content .sale-box .over .cen-lef dl .one{line-height:18px;padding:0 13px;
+											     text-align:left;margin-bottom:10px;}	
+#content .sale-box .over .cen-lef dl .two{line-height:18px;height:70px;
+											     padding:0 13px;text-align:left;}	
+
+																			
+#content .sale-box .over .cen-rig{width:240px;
+										 height:415px;
+										 border-right:1px solid #f1f1f1;
+										 float:left;
+										 text-align:center;}
+#content .sale-box .over .cen-rig dl .one{line-height:18px;padding:0 13px;
+											     text-align:left;margin-bottom:10px;}	
+#content .sale-box .over .cen-rig dl .two{line-height:18px;height:70px;
+											     padding:0 13px;text-align:left;}										
+										
+#content .sale-box .over .rig{width:235px;height:415px;float:left;text-align:center;}
+#content .sale-box .over .rig dd{line-height:18px;text-align:left;padding:0 13px;}
+/*-----------------------------active--------------------------------------*/
+#content .active{height:373px;clear:both;margin-top:15px;}
+#content .active .top{height:40px;border-bottom:2px solid #d0d0d0;padding-top:20px;}
+#content .active .top h2{height:40px;
+						 color:#000;
+						 float:left;
+						 line-height:40px;
+						 font-size:18px;
+						 text-align:left;
+						 }
+#content .active .top ul{float:right;}
+#content .active .top li{height:40px;line-height:40px;margin-left:13px;float:left;}
+
+#content .active .down{height:302px;margin-top:10px;}
+#content .active .down img{height:302px;width:235px;margin-right:5px;float:left;}
+#content .active .down img.last{margin-right:0;}
+/*-----------------------------skin-care--------------------------------------*/
+#content .skin-care{height:615px;}
+#content .skin-care .top{height:64px;
+						 background:url(../img/skin.jpg) no-repeat 5px 24px;
+						 border-bottom:2px solid #0094ff;}
+#content .skin-care .top ul{float:right;padding-top:24px;}
+#content .skin-care .top li{height:40px;line-height:40px;margin-left:13px;float:left;}
+#content .skin-care .mid{height:480px;margin-top:10px;border-bottom:1px solid #f1f1f1;}
+#content .skin-care .mid .midleft{width:270px;height:480px;float:left;}
+#content .skin-care .mid .midcenter{width:690px;height:480px;float:left;}
+#content .skin-care .mid .midcenter .up{width:690px;
+										height:200px;
+										border-bottom:1px solid #f1f1f1;}
+
+
+#content .skin-care .mid .midcenter .up dl{float:left;
+										   width:344px;
+										   padding:7px 0 10px 0;
+										   border-right:1px solid #f1f1f1;}
+#content .skin-care .mid .midcenter .up dl dt{float:left;}
+#content .skin-care .mid .midcenter .up dl dd{float:left;width:135px;}
+#content .skin-care .mid .midcenter .up dl{text-align:center;}
+
+#content .skin-care .mid .midcenter .up dl .one{line-height:18px;
+												padding:0 13px;
+											    text-align:left;
+											    margin:15px 0 10px 0;}	
+											    
+#content .skin-care .mid .midcenter .up dl .two{line-height:18px;
+												height:70px;
+											    padding:0 13px;
+											    text-align:left;}	
+											    
+#content .skin-care .mid .midcenter .up  dd.three{padding:5px 14px;
+											   text-align:bottom;color:#ff1a3a;
+											   font-size:17px;
+											   text-align:left;
+											   font-weight:600;
+											   font-family: Arial;}	
+#content .skin-care .mid .midcenter .under{width:690px;
+										   height:278px;
+										   }
+
+#content .skin-care .mid .midcenter .under dl{float:left;
+										      width:229px;
+										      text-align:center;
+										      padding:15px 0 2px 0;
+										      border-right:1px solid #f1f1f1;}
+#content .skin-care .mid .midcenter .under dl .one{line-height:22px;
+												padding:0 13px;
+											    text-align:left;
+											   }	
+											    
+#content .skin-care .mid .midcenter .under dl .two{line-height:22px;
+											    padding:0 13px;
+											    text-align:left;}	
+											    
+#content .skin-care .mid .midcenter .under  dd.three{padding:5px 14px;
+											   text-align:bottom;color:#ff1a3a;
+											   font-size:17px;
+											   text-align:left;
+											   font-weight:600;
+											   font-family: Arial;}	
+#content .skin-care .mid .midright{height:480px;width:220px;float:right;}
+#content .skin-care .mid .midright h2{height:30px;
+									  border-bottom:2px solid #f1f1f1;
+									  text-align:center;
+									  color:red;
+									  text-align:center;}
+
+#content .skin-care .mid .midright .accor{height:448px;width:220px;margin-top:2px;}
+#content .skin-care .mid .midright .accor .pic{ height: 204px;
+											    width: 176px;
+											    display:none;
+											    background: #fff;
+											    color: #aa0;
+											    border-bottom: 1px solid #e4e4e4;
+											    text-align: center;
+											    padding: 13px 21px;
+												}
+#content .skin-care .mid .midright .accor .pic dl{text-align:center;}
+#content .skin-care .mid .midright .accor .pic dd a{line-height:22px;
+													width:176px;
+													height:22px;
+													display:inline-block;
+													overflow: hidden;}
+#content .skin-care .mid .midright .accor .world{height:18px;
+												 border-bottom: 1px solid #e4e4e4;
+												 padding:12px 8px; 
+												 }
+#content .skin-care .mid .midright .accor .world span{float:left;height:24px;
+													  line-height:24px;
+													  width:165px;
+													  overflow: hidden;
+													  text-align:left;}											   
+#content .skin-care .mid .midright .accor .world .num{margin-right:10px;
+													  border:2px solid red;
+													  border-radius: 50%;
+													  width:18px;
+													  height:18px;
+													  line-height:18px;
+													  text-align:center;}
+#content .skin-care .down{height:57px;border-bottom:1px solid #f1f1f1;}
+#content .skin-care .down li{float:left;
+							 height:57px;
+							 margin:10px 17px;}
+
+/*----------------------------------content/make-up-------------------------*/
+
+#content .make-up .top{height:64px;
+					   background:url(../img/makr-up.jpg) no-repeat 5px 24px;
+					   border-bottom:2px solid #0094ff;}
+
+/*----------------------------------content/perfume-------------------------*/
+#content .perfume .top{height:64px;
+						 background:url(../img/perfume.jpg) no-repeat 5px 24px;
+						 border-bottom:2px solid #0094ff;}
+#content .perfume .mid .mid-left{height:480px;float:left;}
+#content .perfume .mid .mid-left .le{width:325px;
+									 margin-right:2px;
+									 float:left;}
+#content .perfume .mid .mid-left .ce{width:355px;
+									 margin-right:1px;
+									 float:left;}
+#content .perfume .mid .mid-left .ce .pe-top{height:275px;
+										     margin-bottom:2px;}
+#content .perfume .mid .mid-left .ce .pe-down{height:203px;}
+#content .perfume .mid .mid-left .ce .pe-down a{float:left;}										     
+#content .perfume .mid .mid-left .rig{width:275px;float:left;}
+/*----------------------------------content/man-------------------------*/
+#content .man .top{height:64px;
+				   background:url(../img/man.jpg) no-repeat 5px 24px;
+				   border-bottom:2px solid #0094ff;}
+#content .man .mid .mid-left{height:480px;width:615px;float:left;}
+#content .man .mid .mid-left dl{float: left;
+							    width: 184px;
+							    height: 227px;
+							    border-right: 1px solid #f1f1f1;
+							    border-bottom: 1px solid #f1f1f1;
+							    padding: 6px 10px;
+							    text-align: center;}
+
+#content .man .mid .mid-left dl  dd.three{padding:10px 13px 0;
+										 text-align:bottom;color:#ff1a3a;
+										 font-size:13px;
+										 font-weight:600;
+										 font-family: Arial;}	
+#content .man .mid .mid-tu{width:345px;float:left;margin-left:2px;}
+
+/*----------------------------------content/body-hear-------------------------*/
+#content .body-hear .top{height:64px;
+				   background:url(../img/hear.jpg) no-repeat 5px 24px;
+				   border-bottom:2px solid #0094ff;}
+/*----------------------------------content/beauty-news-------------------------*/
+#content .beauty-news{height:515px;margin-top:25px;} 
+#content .beauty-news .new-left{width:765px;
+								border:1px solid #f1f1f1;
+								border-top:2px solid #f1f1f1;
+								height:465px;
+								float:left;
+								padding:0 20px;}
+#content .beauty-news .new-left h3{height:37px;
+								   width:765px;
+								   line-height:37px;
+								   font-size:18px;
+								   padding-left:5px;
+								   border-bottom:1px solid #f1f1f1;}
+#content .beauty-news .new-left .le{width:250px;
+									height:405px;
+									float:left;
+									padding:20px 30px 0 10px;
+									text-align:center;}
+#content .beauty-news .new-left .le .top{margin-top:5px;
+									     height:25px;
+									     line-height:25px;
+									     width:250px;
+									     overflow: hidden;
+									     font-weight:600;
+									     text-align:center;
+									     color:#545454;
+									     font-size:14px;}
+#content .beauty-news .new-left .le .down{line-height:20px;
+										  height:40px;
+										  color:#999;
+										  width:250px;
+										  font-size:12px;}
+
+
+#content .beauty-news .new-left .ri{width:465px;
+									height:120px;
+									float:left;
+									padding-top:20px;
+									text-align:center;}
+#content .beauty-news .new-left .ri dt{float:left;margin-right:20px;}									
+#content .beauty-news .new-left .ri .top{margin-top:5px;
+									     height:40px;
+									     line-height:40px;
+									     width:290px;
+									     float:left;
+									     text-align:left;
+									     overflow: hidden;
+									     font-weight:600;
+									     color:#545454;}
+#content .beauty-news .new-left .ri .down{line-height:20px;
+										  height:70px;
+										  color:#999;
+										  float:left;
+										  text-align:left;
+										  width:290px;
+										  font-size:12px;}
+
+#content .beauty-news .new-right{width:326px;
+								 border:1px solid #f1f1f1;
+								 border-top:2px solid #f1f1f1;
+								 height:465px;
+								 padding:0 22px;
+								 background:#f9f9f9;
+								 float:right;}
+#content .beauty-news .new-right h2{height:54px;
+									background:url(../img/newbg.jpg) no-repeat 0 center;
+									width:340px;
+									padding-left:20px;
+									line-height:54px;
+									color:#fff;
+									float:right;}
+#content .beauty-news .new-right dl{height:94px;
+									border-bottom:1px dashed #f1f1f1;
+									float:left;
+									text-align:left;
+									width:326px;
+									padding-top:11px;}									
+#content .beauty-news .new-right .u{height:25px;
+									line-height:25px;
+									font-weight:600;
+									margin-top:15px;
+									float:left;
+									width:226px;
+									overflow: hidden;}
+#content .beauty-news .new-right .n{line-height:18px;
+									height:36px;
+									overflow: hidden;
+									color:#999;
+									width:226px;
+									float:left;}
+#content .beauty-news .new-right .npic{margin-left:18px;
+										border:1px solid #ccc;
+										width:80px;
+										height:80px;
+										float:right;}
+
+
+
+

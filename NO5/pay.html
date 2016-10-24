@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>N°5</title>
+		<link rel="stylesheet" type="text/css" href="css/head.css" />
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/cookie.js"></script>
+		<script>
+$(function(){
+	$("#payfooter").load("foot.html");
+			
+	$("#payheader").load("head.html",function(){
+		
+	  var now = new Date();
+	  if(getCookie("judge")==1){
+		if(now.getHours() >= 6 && now.getHours() <8){
+			$("#header-info .time").html("早上好，<b style='color:red'>" + getCookie("name")+ "</b>！欢迎来到No5时尚广场。")
+		}else if(now.getHours() >= 8 && now.getHours() <12){
+			$("#header-info .time").html("上午好，<b style='color:red'>" + getCookie("name")+ "</b>！欢迎来到No5时尚广场。")
+		}else if(now.getHours() >= 12 && now.getHours() <14){
+			$("#header-info .time").text("中午好，<b style='color:red'>" + getCookie("name")+ "</b>！欢迎来到No5时尚广场。")
+		}else if(now.getHours()>= 14 && now.getHours()<18){
+			$("#header-info .time").html("下午好，<b style='color:red'>" + getCookie("name")+ "</b>！欢迎来到No5时尚广场。")
+		}else {
+			$("#header-info .time").html("晚上好，<b style='color:red'>" + getCookie("name")+ "</b>！欢迎来到No5时尚广场。")
+		};
+	 }else{
+	 	if(now.getHours() >= 6 && now.getHours() <8){
+			$("#header-info .time").text("早上好，欢迎光临No5时尚广场。")
+		}else if(now.getHours() >= 8 && now.getHours() <12){
+			$("#header-info .time").text("上午好，欢迎光临No5时尚广场。")
+		}else if(now.getHours() >= 12 && now.getHours() <14){
+			$("#header-info .time").text("中午好，欢迎光临No5时尚广场。")
+		}else if(now.getHours()>= 14 && now.getHours()<18){
+			$("#header-info .time").text("下午好，欢迎光临No5时尚广场。")
+		}else {
+			$("#header-info .time").text("晚上好，欢迎光临No5时尚广场。")
+		};
+	 };
+	 
+	
+	if(getCookie("judge")==1){
+	 	$("#header-info .l .deng").html("<a style=" + "cursor:pointer;"+">[退出]</a>");
+	 	$("#header-info .l .deng").on("click","a",function(){
+	 		$("#header-info .l .deng").html("<a href='logi.html'>[登录]</a>" + "<a href='reg.html'>[免费注册]</a>");
+	 		setCookie("judge",0);
+	 		window.location.href="logi.html";
+	 	})
+	 }
+	
+	//三级菜单	
+		$("#box").mouseenter(function(){
+			$("#box dl").stop(true).slideDown(200)
+		});
+					
+		$("#box").mouseleave(function(){
+			$("#box dl").stop(true).slideUp(200)
+		});
+					
+		$("#box dl").mouseenter(function(){	
+			$(this).css("background","#fff");
+			$(this).children("dd").stop(true).show();
+		});
+					
+		$("#box dl").mouseleave(function(){
+			$(this).css("background","#F8F8F8");
+			$(this).children("dd").stop(true).hide();
+		});
+	});
+//地区选择	
+		$.ajax({
+			url:"payjson.json",
+			dataType:"json",
+			success:function(dat){
+				var mag = dat.data;
+//				alert(mag)
+				var str = "";
+				for(var i in mag){
+					str += "<option id="+ mag[i].id +">";
+					str += mag[i].name;
+					str += "</option>";
+				};
+				$("#pay-c .info .inp .s").append(str);
+				
+				$("#pay-c .info .inp .s").change(function(){
+					var dataid = $(".s option:selected").attr("id");
+					//alert(dataid);
+					var datai = ("data"+dataid);
+					var magg = eval("dat."+ datai);
+//					alert(datai);
+//					alert(dat);
+//					alert(magg);
+//					alert(dat.data1);
+
+				  var str2 ="";
+				  $("#pay-c .info .inp .x").children("option").not("option:first").remove();
+				  for(var j in magg){
+					str2 += "<option id="+ magg[j].id +">";
+					str2 += magg[j].name;
+					str2 += "</option>";
+				   }; 
+				  $("#pay-c .info .inp .x").append(str2);
+				})
+				
+				
+				$("#pay-c .info .inp .x").change(function(){
+					var dataid = $(".x option:selected").attr("id");
+					//alert(dataid);
+					var datai = ("data"+dataid);
+					var maggg = eval("dat."+ datai);
+//					alert(datai);
+//					alert(dat);
+//					alert(magg);
+//					alert(dat.data1);
+
+				  var str3 ="";
+				  $("#pay-c .info .inp .q").children("option").not("option:first").remove();
+				  for(var i in maggg){
+					str3 += "<option id="+ maggg[i].id +">";
+					str3 += maggg[i].name;
+					str3 += "</option>";
+				   }; 
+				  $("#pay-c .info .inp .q").append(str3);
+				});
+					
+			}
+		})
+	
+//代收填表
+	 $("#pay-c .info .inp .other").click(function(){
+	 	$("#pay-c .info .inp .dis").css("display","block");
+	 })
+	
+});
+		</script>
+		<style>
+			#pay-c{width:958px;
+				   border:1px solid #ccc;
+				   margin:10px auto;
+				   padding:10px;}
+			#pay-c .nav{width:955px;
+						height:30px;
+						background-image:url(img/pay-bg.png);
+						background-repeat: no-repeat;
+   					    background-position: center -35px;
+                        background-color: #EEEEEE;
+                        border: 1px solid #B7B7B7;
+						margin-top:10px;}
+			#pay-c .info{border-bottom:1px dashed #ccc;}
+			#pay-c .info h3{height:28px;line-height:28px;color:#000;}	
+			#pay-c .info .inp{margin-left:15px;}
+			#pay-c .info .inp div{margin-top:8px;}
+			#pay-c .info .inp span{float:left;
+								   width:60px;
+								   height:18px;
+								   line-height:20px;}
+			#pay-c .info .inp input{background:#fafafa;
+								    width:200px;
+								    border:1px solid #ccc;
+								    height:18px;}
+			#pay-c .info .inp .btn{width:108px;
+								 height:30px;
+								 line-height:30px;
+								 background:#ffcd61;
+								 border:1px solid #a40;
+								 margin-top:12px;
+								 font-weight:600px;
+								 margin-left:60px;}					   
+			#pay-c .info .inp select{width:80px;}
+			#pay-c .info .inp .dis{height:20px;margin:0;margin-bottom:8px;display:none;}						 
+			#pay-c .info .inp .dis input{width:150px;height:18px;}						 			#pay-c .topay{height:50px;margin-bottom:20px;margin-top:10px;text-align:right;}
+										  		
+		</style>
+	</head>
+	<body>
+		<div id="payheader"></div>
+		<div id="pay-c">
+			<div class="nav"></div>
+			<div class="info">
+				<h3>收货信息</h3>
+				<form class="inp">
+					<div><span>姓名：</span><input type="text" /></div>
+					<div><span>固定电话：</span><input type="text" /></div>
+					<div><span>手机：</span><input type="text" /></div>
+					<div><span>邮箱：</span><input type="text" /></div>
+					<div><span>地区：</span><select class="s">
+										<option>请选择...</option>
+									</select>省
+									<select class="x">
+										<option>请选择...</option>
+									</select>市
+									<select class="q">
+										<option>请选择...</option>
+									</select>区 </div>
+					
+					<div><span>详细地址：</span><input type="text" style="width:288px;"/></div>
+					<div><span>邮编：</span><input type="text" /></div>
+					<input  class="btn" type="button" value="保存收货人地址" /><br/>
+					<div class="other" style="height:20px;line-height:20px;"><input type="checkbox" id="chkbuyer" style="width:15px;margin-top:2px;float:left"/>
+					<label for="chkbuyer" ><a href="#" style="color:dodgerblue;float:left;">订货人信息 (非本人收货请勾选此项,当订单出现异常时,我们会优先与您联系)</a></label></div>
+					<div class="dis">
+						姓名：<input type="text" />
+						电话：<input type="text" />
+						邮箱：<input type="text" />
+						<input style="width:40px;background:#f3b123" type="button" value="保存" />
+					</div>
+				</form>
+				
+			</div>
+			<div class="topay">
+				<a href="cpay.html"><img src="img/topay.gif" /></a>
+			</div>
+		</div>
+		<div id="payfooter"></div>
+	</body>
+</html>
